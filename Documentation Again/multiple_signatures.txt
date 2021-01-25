@@ -1,0 +1,9 @@
+# The %w() literal makes an array of strings (without needing to wrap each string in quote marks and use commas)
+
+# Array#fetch retrieves an array element using the index provided.
+
+# puts a.fetch(7) will return an error--the index is out of bounds.
+
+# puts a.fetch(7, 'beats me') will return 'beats me' because that was provided in case the index is not in the array bounds
+
+# puts a.fetch(7) { |index| index **2 } will return 49, which is 7 squared. The offset provided is out of bounds and so the block is executed with the argument passed being used as the local variable for the block.

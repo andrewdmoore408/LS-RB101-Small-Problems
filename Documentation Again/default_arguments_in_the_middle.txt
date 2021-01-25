@@ -1,0 +1,5 @@
+This code would return [4, 5, 3, 6]
+
+I misunderstood the docs at first but now believe I understand. The parameters without default value are assigned first, which means a is assigned the value of 4 and then d is assigned the value of 6. After that, parameters with default values are assigned from the left to right. B is the leftmost remaining parameter (with a default argument) and thus is assigned the remaining argument passed, and c is assigned its default argument of 3.
+
+I'm still a bit confused as to why the sequence jumps from assigning a value to a and then to d, but the main point I'm taking away (as noted in the solution) is not to do this in code because it's confusing. Moving forward, I'll keep default arguments grouped either at the front of the parameter list or the end.

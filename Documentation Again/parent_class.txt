@@ -1,0 +1,3 @@
+The default argument for #public_methods is all=true. Passing false instead limits the methods returned to only those defined within the current object rather than superclasses.
+
+Thus, puts s.public_methods(false).inspect will lead to the desired result.

@@ -1,0 +1,5 @@
+a = [1, 4, 8, 11, 15, 19]
+
+# The condition here is that we want the first element greater than 8, so I would make that what we're checking in the block.
+
+greater_than_8 = a.bsearch { |x| x > 8 }

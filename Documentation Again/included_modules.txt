@@ -1,0 +1,7 @@
+This one confused me (should've looked at the exercise name...)
+
+The answer is: puts a.min(2)
+
+The point of this lesson is to remember that not only is it important to check class methods as well as all superclass methods but also modules/mix-ins. In Ruby 2.3, neither the Array class nor its superclass contained a #min method, but the Enumerable module did.
+
+Ruby doesn't have classical multiple inheritance, but classes can use methods from modules as well as superclasses
