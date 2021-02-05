@@ -1,0 +1,6 @@
+name = 'Bob'
+save_name = name
+name.upcase!
+puts name, save_name
+
+This code prints out BOB BOB (on separate lines). The reason for this is that both name and save_name are referencing the exact same string object. Thus, when the mutating #upcase! method is invoked on name, it modifies the string object to which both variables point. This leads to the values which both variables reference being modified, not only name.

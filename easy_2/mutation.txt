@@ -1,0 +1,19 @@
+array1 = %w(Moe Larry Curly Shemp Harpo Chico Groucho Zeppo)
+array2 = []
+array1.each { |value| array2 << value }
+array1.each { |value| value.upcase! if value.start_with?('C', 'S') }
+puts array2
+
+I believe the above code will print "Moe Larry Curly Shemp Harpo Chico Groucho Zeppo" (each word on a separate line). 
+
+An array of strings is initialize on line 1, then an empty array is declared on line 2. 
+
+On line 3, the code iterates through all of array1 and appends each of its elements to array2. Now array1 and array2 should contain the same values (the same array of strings) but stored in different locations with different object_ids--separate array objects.
+
+Line 4 iterates through each element of array1 and mutates an element to be uppercase if it begins with a C or S--so after this line, Curly => CURLY, Shemp => SHEMP, and Chico => CHICO.
+
+Lastly, the contents of array2 are output on separate lines after the invocation of puts.
+
+# CORRECTION: I'm mistaken about something--although the arrays are separate objects, they're pointing to the same elements. The arrays have different object_ids, but the elements they're pointing to are the same. 
+
+Thus, when the elements in array1 are mututated with the invocatoin of upcase!, so are they elements in array2.
