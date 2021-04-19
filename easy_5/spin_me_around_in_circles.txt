@@ -1,0 +1,2 @@
+# With the use of String#split, the string's words are being converted to a new array
+# and then mutated from there, so the string that's returned will be a new string.
